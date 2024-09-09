@@ -9,9 +9,9 @@ entries:
           email: guneskorkmaz@outlook.com.tr
     apiVersion: v2
     appVersion: 0.0.1
-    created: "2024-09-09T15:21:56.9394415+03:00"
+    created: "2024-09-09T15:33:42.8561409+03:00"
     description: A Helm chart for RouteHub Client deployment
-    digest: b65a92246fcd7b6a36b32e7ed690f1b5af59eadf8356c97024893cded42c2f69
+    digest: 486332d90bf684beba9e62e7df348a267bbedcdf0d58a06a4680b41562c3691e
     home: https://github.com/RouteHub-Link/RouteHub.HELM
     icon: https://avatars.githubusercontent.com/u/153122518?s=240
     keywords:
@@ -22,6 +22,7 @@ entries:
     maintainers:
     - email: guneskorkmaz@outlook.com.tr
       name: runaho
+      url: https://github.com/runaho
     name: routehub-client-hub
     sources:
     - https://github.com/RouteHub-Link/RouteHub.HELM/tree/main/client
@@ -29,4 +30,4 @@ entries:
     urls:
     - routehub-client-hub-1.0.0.tgz
     version: 1.0.0
-generated: "2024-09-09T15:21:56.938287+03:00"
+generated: "2024-09-09T15:33:42.8561409+03:00"
