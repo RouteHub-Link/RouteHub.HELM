@@ -11,20 +11,28 @@ This repository contains Helm charts for various applications and services.
 To use the charts from this repository, follow these steps:
 
 1. Add this repository to your Helm installation:
-   ```
-   helm repo add myrepo <WIP>
-   ```
-   Replace `<WIP>` with the actual URL of your hosted chart repository.
+```
+helm repo add routehub-helm https://routehub-link.github.io/RouteHub.HELM/
+```
 
 2. Update your local chart information:
-   ```
-   helm repo update
-   ```
+```
+helm repo update
+```
 
 3. Install a chart:
-   ```
-   helm install my-release <WIP>/routehub-client
-   ```
+```bash
+helm install my-hub https://routehub-link.github.io/RouteHub.HELM//routehub-client-hub \
+   --namespace routehub-clients \
+   --create-namespace \
+   --set global.customRegistry=your.registry/ \
+   --set global.imagePullSecrets[0].name=your-secret-name \
+   --set routehubClientRest.environment.Name="Test Hub" \
+   --set routehubClientRest.environment.ORGANIZATION_ID=test-org \
+   --set routehubClientRest.environment.OWNER_ID=test-owner \
+   --set routehubClientRest.environment.PLATFORM_ID=12058bdf-8940-43b3-bd90-13487e4c8fc4 \
+   --set routehubClientRest.environment.SEED=TRUE 
+```
 
 ## Contributing
 
