@@ -9,7 +9,7 @@ entries:
           email: guneskorkmaz@outlook.com.tr
     apiVersion: v2
     appVersion: 0.0.1
-    created: "2024-09-09T15:19:29.8694925+03:00"
+    created: "2024-09-09T15:21:56.9394415+03:00"
     description: A Helm chart for RouteHub Client deployment
     digest: b65a92246fcd7b6a36b32e7ed690f1b5af59eadf8356c97024893cded42c2f69
     home: https://github.com/RouteHub-Link/RouteHub.HELM
@@ -29,4 +29,4 @@ entries:
     urls:
     - routehub-client-hub-1.0.0.tgz
     version: 1.0.0
-generated: "2024-09-09T15:19:29.8664571+03:00"
+generated: "2024-09-09T15:21:56.938287+03:00"

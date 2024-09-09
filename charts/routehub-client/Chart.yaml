@@ -9,8 +9,8 @@ keywords:
   - mqtt
   - rest
 sources:
-    - https://github.com/RouteHub-Link/RouteHub.HELM/tree/main/client
-    - https://github.com/RouteHub-Link/RouteHub.Client.Hub
+  - https://github.com/RouteHub-Link/RouteHub.HELM/tree/main/client
+  - https://github.com/RouteHub-Link/RouteHub.Client.Hub
 maintainers:
   - name: runaho
     email: guneskorkmaz@outlook.com.tr
