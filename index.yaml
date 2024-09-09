@@ -1,11 +1,17 @@
 apiVersion: v1
 entries:
   routehub-client-hub:
-  - apiVersion: v2
+  - annotations:
+      artifacthub.io/changes: |
+        - Initial release
+      artifacthub.io/maintainers: |
+        - name: runaho
+          email: guneskorkmaz@outlook.com.tr
+    apiVersion: v2
     appVersion: 0.0.1
-    created: "2024-09-09T15:14:19.2999293+03:00"
+    created: "2024-09-09T15:19:29.8694925+03:00"
     description: A Helm chart for RouteHub Client deployment
-    digest: bd710865ec1fe00747c9f8029aa615310cb366f1361265ed32876809c44955df
+    digest: b65a92246fcd7b6a36b32e7ed690f1b5af59eadf8356c97024893cded42c2f69
     home: https://github.com/RouteHub-Link/RouteHub.HELM
     icon: https://avatars.githubusercontent.com/u/153122518?s=240
     keywords:
@@ -20,8 +26,7 @@ entries:
     sources:
     - https://github.com/RouteHub-Link/RouteHub.HELM/tree/main/client
     - https://github.com/RouteHub-Link/RouteHub.Client.Hub
-    type: application
     urls:
     - routehub-client-hub-1.0.0.tgz
     version: 1.0.0
-generated: "2024-09-09T15:14:19.2993797+03:00"
+generated: "2024-09-09T15:19:29.8664571+03:00"
