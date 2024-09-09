@@ -21,7 +21,7 @@ The RouteHub Client application consists of the following components:
 To install the chart with the release name `my-release`:
 
 ```bash
-helm install my-release ./client
+helm install my-release ./charts/routehub-client
 ```
 
 ## Configuration
@@ -59,13 +59,13 @@ The following table lists the configurable parameters of the RouteHub Client cha
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`. For example:
 
 ```bash
-helm install my-release ./client --set routehubClientRest.replicaCount=2
+helm install my-release ./charts/routehub-client --set routehubClientRest.replicaCount=2
 ```
 
 Alternatively, a YAML file that specifies the values for the parameters can be provided while installing the chart. For example:
 
 ```bash
-helm install my-release ./client -f values.yaml
+helm install my-release ./charts/routehub-client -f values.yaml
 ```
 
 ## Updating the Chart
@@ -73,7 +73,7 @@ helm install my-release ./client -f values.yaml
 To update the release of the RouteHub Client chart:
 
 ```bash
-helm upgrade my-release ./client
+helm upgrade my-release ./charts/routehub-client
 ```
 
 ## Uninstalling the Chart

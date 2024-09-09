@@ -1,0 +1,24 @@
+apiVersion: v2
+name: routehub-client-hub
+description: A Helm chart for RouteHub Client deployment
+home: https://github.com/RouteHub-Link/RouteHub.HELM
+icon: https://avatars.githubusercontent.com/u/153122518?s=240
+keywords:
+  - routehub
+  - client
+  - mqtt
+  - rest
+sources:
+    - https://github.com/RouteHub-Link/RouteHub.HELM/tree/main/client
+    - https://github.com/RouteHub-Link/RouteHub.Client.Hub
+maintainers:
+  - name: runaho
+    email: guneskorkmaz@outlook.com.tr
+version: 1.0.0
+appVersion: "0.0.1"
+annotations:
+  artifacthub.io/changes: |
+    - Initial release
+  artifacthub.io/maintainers: |
+    - name: runaho
+      email: guneskorkmaz@outlook.com.tr

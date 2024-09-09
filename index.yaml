@@ -3,7 +3,7 @@ entries:
   routehub-client-hub:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2024-09-09T14:54:10.6083884+03:00"
+    created: "2024-09-09T15:14:19.2999293+03:00"
     description: A Helm chart for RouteHub Client deployment
     digest: bd710865ec1fe00747c9f8029aa615310cb366f1361265ed32876809c44955df
     home: https://github.com/RouteHub-Link/RouteHub.HELM
@@ -24,4 +24,4 @@ entries:
     urls:
     - routehub-client-hub-1.0.0.tgz
     version: 1.0.0
-generated: "2024-09-09T14:54:10.6073399+03:00"
+generated: "2024-09-09T15:14:19.2993797+03:00"
