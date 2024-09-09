@@ -22,7 +22,7 @@ helm repo update
 
 3. Install a chart:
 ```bash
-helm install my-hub https://routehub-link.github.io/RouteHub.HELM//routehub-client-hub \
+helm install my-hub routehub-helm/routehub-client-hub \
    --namespace routehub-clients \
    --create-namespace \
    --set global.customRegistry=your.registry/ \
