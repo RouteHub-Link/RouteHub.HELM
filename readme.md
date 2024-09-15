@@ -47,3 +47,17 @@ If you'd like to contribute to this repository, please follow these steps:
 3. Make your changes and commit them
 4. Push your changes to your fork
 5. Create a pull request
+
+## Artifacthub
+
+- Packaging charts
+
+  ```bash
+  helm package ./charts/chart-dir
+  ```
+
+- Updating index.yaml
+
+  ```bash
+  helm repo index .
+  ```
