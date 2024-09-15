@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+    name: {{ .Release.Name }}-postgres-config
+data:
+  POSTGRES_APPLICATION_NAME: "{{ .Release.Name }}-RouteHub-GraphQL"
+  POSTGRES_HOST: "{{ .Release.Name }}-postgres"
+  POSTGRES_PASSWORD: "{{ .Values.postgres.password }}"
+  POSTGRES_USER: "{{ .Values.postgres.username }}"
+  POSTGRES_DB: "{{ .Values.postgres.database }}"

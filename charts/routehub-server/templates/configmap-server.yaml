@@ -1,0 +1,49 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+    name: {{ .Release.Name }}-server-config
+data:
+    HOSTING.MODE: "{{.Values.routehubServer.environment.HOSTING_MODE}}"
+   
+    SERVICES.DOMAIN_UTILS.HOST: "{{.Values.routehubServer.environment.SERVICES_DOMAIN_UTILS_HOST}}"
+    
+    DATABASE.HOST: "{{ .Release.Name }}-postgres"
+    DATABASE.PORT: "{{.Values.postgres.port}}"
+    DATABASE.USER: "{{.Values.postgres.username}}"
+    DATABASE.PASSWORD: "{{.Values.postgres.password}}"
+    DATABASE.DATABASE: "{{.Values.postgres.database}}"
+    DATABASE.APPLICATION_NAME: "{{.Values.routehubServer.environment.DATABASE_APPLICATION_NAME}}"
+
+    DATABASE.TYPE.MIGRATE: "{{.Values.routehubServer.environment.DATABASE_TYPE_MIGRATE}}"
+    DATABASE.TYPE.SEED: "{{.Values.routehubServer.environment.DATABASE_TYPE_SEED}}"
+    DATABASE.TYPE.PROVIDER: "{{.Values.routehubServer.environment.DATABASE_TYPE_PROVIDER}}"
+    
+    DATABASE.SEED.ADMINS.0.SUBJECT: "{{.Values.routehubServer.environment.DATABASE_SEED_ADMINS_0_SUBJECT}}"
+    DATABASE.SEED.ADMINS.1.SUBJECT: "{{.Values.routehubServer.environment.DATABASE_SEED_ADMINS_1_SUBJECT}}"
+   
+    DATABASE.SEED.ORGANIZATION.NAME: "{{.Values.routehubServer.environment.DATABASE_SEED_ORGANIZATION_NAME}}"
+    DATABASE.SEED.ORGANIZATION.DESCRIPTION: "{{.Values.routehubServer.environment.DATABASE_SEED_ORGANIZATION_DESCRIPTION}}"
+    DATABASE.SEED.ORGANIZATION.URL: "{{.Values.routehubServer.environment.DATABASE_SEED_ORGANIZATION_URL}}"
+    DATABASE.SEED.DOMAIN.NAME: "{{.Values.routehubServer.environment.DATABASE_SEED_DOMAIN_NAME}}"
+    DATABASE.SEED.DOMAIN.URL: "{{.Values.routehubServer.environment.DATABASE_SEED_DOMAIN_URL}}"
+
+    REDIS.ADDRESS: "{{ .Release.Name }}-redis:{{.Values.global.redis.PORT}}"
+    
+    GRAPHQL.PLAYGROUND: "{{.Values.routehubServer.environment.GRAPHQL_PLAYGROUND}}"
+    GRAPHQL.DATALOADER.WAIT: "{{.Values.routehubServer.environment.GRAPHQL_DATALOADER_WAIT}}"
+    GRAPHQL.DATALOADER.CACHE: "{{.Values.routehubServer.environment.GRAPHQL_DATALOADER_CACHE}}"
+    GRAPHQL.DATALOADER.LRUE.SIZE: "{{.Values.routehubServer.environment.GRAPHQL_DATALOADER_LRUE_SIZE}}"
+    GRAPHQL.DATALOADER.LRUE.EXPIRE: "{{.Values.routehubServer.environment.GRAPHQL_DATALOADER_LRUE_EXPIRE}}"
+    
+    CASBIN.MODEL: "{{.Values.routehubServer.environment.CASBIN_MODEL}}"
+    CASBIN.LOG.LEVEL: "{{.Values.routehubServer.environment.CASBIN_LOG_LEVEL}}"
+
+    ZITADEL.CLIENT.ID: "{{.Values.routehubServer.environment.ZITADEL_CLIENT_ID}}"
+    ZITADEL.CALLBACK: "{{.Values.routehubServer.environment.ZITADEL_CALLBACK}}"
+    ZITADEL.SCOPE: "{{.Values.routehubServer.environment.ZITADEL_SCOPE}}"
+    ZITADEL.AUTHORIZE.URL: "{{.Values.routehubServer.environment.ZITADEL_AUTHORIZE_URL}}"
+    ZITADEL_TOKEN_URL: "{{.Values.routehubServer.environment.ZITADEL_TOKEN_URL}}"
+    ZITADEL.ISSUER: "{{.Values.routehubServer.environment.ZITADEL_ISSUER}}"
+    ZITADEL.DOMAIN: "{{.Values.routehubServer.environment.ZITADEL_DOMAIN}}"
+    ZITADEL.PORT: "{{.Values.routehubServer.environment.ZITADEL_PORT}}"
+    ZITADEL.INSECURE: "{{.Values.routehubServer.environment.ZITADEL_INSECURE}}"

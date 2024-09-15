@@ -27,9 +27,63 @@ spec:
           image: "{{ .Values.global.customRegistry }}{{ .Values.routehubClientMqtt.image.repository }}:{{ .Values.routehubClientMqtt.image.tag }}"
           ports:
             - containerPort: 1883
-          envFrom:
-            - configMapRef:
-                name: {{ .Release.Name }}-config
           env:
-            - name: HOSTING_MODE
-              value: {{ .Values.routehubClientMqtt.environment.HOSTING_MODE }}
+            # Postgres
+            - name: DATABASE.HOST
+              valueFrom:
+              configMapKeyRef:
+                name: {{ .Release.Name }}-postgres-config
+                key: POSTGRES_HOST
+            - name: DATABASE.PORT
+              valueFrom:
+              configMapKeyRef:
+                name: {{ .Release.Name }}-postgres-config
+                key: POSTGRES_PORT
+            - name: DATABASE.USER
+              valueFrom:
+              configMapKeyRef:
+                name:  {{ .Release.Name }}-postgres-config
+                key: POSTGRES_USER
+            - name: DATABASE.PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name:  {{ .Release.Name }}-postgres-config
+                  key: POSTGRES_PASSWORD
+            - name: DATABASE.DATABASE
+              valueFrom:
+                configMapKeyRef:
+                  name:  {{ .Release.Name }}-postgres-config
+                  key: POSTGRES_DB
+            - name: DATABASE.APPLICATION_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name:  {{ .Release.Name }}-postgres-config
+                  key: POSTGRES_APPLICATION_NAME
+            # Redis
+            - name: REDIS.ADDR
+              valueFrom:
+                configMapKeyRef:
+                  name:  {{ .Release.Name }}-redis-config
+                  key: REDIS_HOST
+            # GraphQL
+            - name: GRAPHQL.PORT
+              valueFrom:
+                configMapKeyRef:
+                  name:  {{ .Release.Name }}-server-config
+                  key: GRAPHQL_PORT
+            # Casbin MongoDB
+            - name: CASBIN.MONGODB.URI
+              valueFrom:
+                configMapKeyRef:
+                  name:  {{ .Release.Name }}-mongo-config
+                  key: MONGO_URI
+            - name: CASBIN.MONGODB.DATABASE
+              valueFrom:
+                configMapKeyRef:
+                  name:  {{ .Release.Name }}-mongo-config
+                  key: MONGO_DB
+            - name: CASBIN.MONGODB.COLLECTION
+              valueFrom:
+                configMapKeyRef:
+                  name:  {{ .Release.Name }}-mongo-config
+                  key: MONGO_COLLECTION

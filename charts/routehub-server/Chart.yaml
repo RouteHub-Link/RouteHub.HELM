@@ -1,0 +1,24 @@
+apiVersion: v2
+name: routehub-server
+description: A Helm chart for RouteHub Server deployment
+home: https://github.com/RouteHub-Link/RouteHub.HELM
+icon: https://avatars.githubusercontent.com/u/153122518?s=240
+keywords:
+  - routehub
+  - server
+  - graphql
+sources:
+  - https://github.com/RouteHub-Link/RouteHub.HELM/tree/main/client
+  - https://github.com/RouteHub-Link/RouteHub.Client.Hub
+maintainers:
+  - name: runaho
+    email: guneskorkmaz@outlook.com.tr
+    url: https://github.com/runaho
+version: 1.0.1
+appVersion: "0.0.1"
+annotations:
+  artifacthub.io/changes: |
+    - Initial release
+  artifacthub.io/maintainers: |
+    - name: runaho
+      email: guneskorkmaz@outlook.com.tr

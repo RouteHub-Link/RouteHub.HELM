@@ -4,23 +4,27 @@ This repository contains Helm charts for various applications and services.
 
 ## Available Charts
 
-- [RouteHub Client](./routehub-client/README.md): A Helm chart for deploying the RouteHub Client application.
+- [RouteHub Client](./charts/routehub-client/readme.md): A Helm chart for deploying the RouteHub Client application.
+- [RouteHub Server](./charts/routehub-server/readme.md): A Helm chart for deploying the RouteHub Server GraphQL Web Service application.
 
 ## Usage
 
 To use the charts from this repository, follow these steps:
 
 1. Add this repository to your Helm installation:
+
 ```
 helm repo add routehub-helm https://routehub-link.github.io/RouteHub.HELM/
 ```
 
 2. Update your local chart information:
+
 ```
 helm repo update
 ```
 
 3. Install a chart:
+
 ```bash
 helm install my-hub routehub-helm/routehub-client-hub \
    --namespace routehub-clients \

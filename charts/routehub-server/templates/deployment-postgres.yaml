@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-postgres
+  labels:
+    {{- include "routehub-server.labels" . | nindent 4 }}
+    component: postgres
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      {{- include "routehub-server.labels" . | nindent 6 }}
+      component: postgres
+  template:
+    metadata:
+      labels:
+        {{- include "routehub-server.labels" . | nindent 8 }}
+        component: postgres
+    spec:
+      containers:
+        - name: postgres
+          image: "{{ .Values.postgres.image.repository }}:{{ .Values.postgres.image.tag }}"
+          ports:
+            - containerPort: 5432
+          envFrom:
+            - configMapRef:
+                name: {{ .Release.Name }}-postgres-config

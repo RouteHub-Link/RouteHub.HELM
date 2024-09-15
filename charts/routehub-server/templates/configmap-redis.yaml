@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+    name: {{ .Release.Name }}-redis-config
+data:
+  REDIS_HOST: "{{ .Release.Name }}-redis"
+  REDIS_PORT: "{{ .Values.global.redis.PORT }}"
+  REDIS_PASSWORD: "{{ .Values.global.redis.PASSWORD }}"
+  REDIS_DB: "{{ .Values.global.redis.DB }}"
