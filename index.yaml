@@ -9,7 +9,7 @@ entries:
           email: guneskorkmaz@outlook.com.tr
     apiVersion: v2
     appVersion: 0.0.1
-    created: "2024-09-09T16:00:16.9547655+03:00"
+    created: "2024-09-16T01:22:33.9805443+03:00"
     description: A Helm chart for RouteHub Client deployment
     digest: 8677f16b11df159430f0cf5d1a864f8a9862d4c223cd5e36c4afe6d2e15349f0
     home: https://github.com/RouteHub-Link/RouteHub.HELM
@@ -30,4 +30,33 @@ entries:
     urls:
     - routehub-client-hub-1.0.0.tgz
     version: 1.0.0
-generated: "2024-09-09T16:00:16.9541463+03:00"
+  routehub-server:
+  - annotations:
+      artifacthub.io/changes: |
+        - Initial release
+      artifacthub.io/maintainers: |
+        - name: runaho
+          email: guneskorkmaz@outlook.com.tr
+    apiVersion: v2
+    appVersion: 0.0.1
+    created: "2024-09-16T01:22:33.9870088+03:00"
+    description: A Helm chart for RouteHub Server deployment
+    digest: b5f8bb035d2f1ebd400a2e08462240a32eae91f4b8f64d3881da7cf729e516c2
+    home: https://github.com/RouteHub-Link/RouteHub.HELM
+    icon: https://avatars.githubusercontent.com/u/153122518?s=240
+    keywords:
+    - routehub
+    - server
+    - graphql
+    maintainers:
+    - email: guneskorkmaz@outlook.com.tr
+      name: runaho
+      url: https://github.com/runaho
+    name: routehub-server
+    sources:
+    - https://github.com/RouteHub-Link/RouteHub.HELM/tree/main/client
+    - https://github.com/RouteHub-Link/RouteHub.Client.Hub
+    urls:
+    - routehub-server-1.0.1.tgz
+    version: 1.0.1
+generated: "2024-09-16T01:22:33.9721213+03:00"
