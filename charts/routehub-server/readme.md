@@ -14,6 +14,7 @@ The RouteHub Server application consists of the following components:
 
 - Kubernetes 1.12+
 - Helm 3.0+
+- Hosted Zitadel Instance
 
 ## Installing the Chart
 
@@ -138,3 +139,9 @@ helm install my-release routehub-helm/routehub-server \
 ```bash
 --dry-run --debug
 ```
+
+## About Zitadel
+
+App uses Zitadel for OAUTH authentication. To use the app, you need to create a Zitadel instance and configure the app with the Zitadel client ID, callback URL, and other required information.
+After that you need to create an admin user in Zitadel and assign the user to the organization.
+Geather the userId and add it to the DATABASE_SEED_ADMINS_0_SUBJECT and DATABASE_SEED_ADMINS_1_SUBJECT environment variables. (These are optional, but recommended for access as an admin and first time run.)
