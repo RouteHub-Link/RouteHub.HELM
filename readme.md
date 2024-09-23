@@ -1,6 +1,8 @@
 # HELM Charts Repository
 
 This repository contains Helm charts for various applications and services.
+![image](https://github.com/user-attachments/assets/fa3499d5-6ddf-4b9b-b462-357d94ad8c39)
+
 
 ## Available Charts
 
